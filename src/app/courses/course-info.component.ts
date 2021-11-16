@@ -9,7 +9,7 @@ import { CourseService } from "./course.service";
 
 export class CourseInfoComponent implements OnInit {
 
-   course: Course;
+   course = new Course();
 
    constructor(private activatedRoute: ActivatedRoute, private courseService: CourseService) { }
 
@@ -23,10 +23,10 @@ export class CourseInfoComponent implements OnInit {
          });
 
       
-      //+this.route.snapshot.paramMap.get('id')
-      //this.courseId = +this.route.snapshot.queryParamMap.get('id');
-      //this.courseId  =+this.route.snapshot.params["id"];
-      //this.course  = this.courseService.retrieveById(+this.route.snapshot.params["id"]);
+                     //+this.route.snapshot.paramMap.get('id')
+                     //this.courseId = +this.route.snapshot.queryParamMap.get('id');
+                     //this.courseId  =+this.route.snapshot.params["id"];
+                     //this.course  = this.courseService.retrieveById(+this.route.snapshot.params["id"]);
    }
    save(): void {
       this.courseService.save(this.course).subscribe({
